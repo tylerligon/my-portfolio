@@ -5,17 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navbar</title>
     <link rel="stylesheet" href="style.css">
+    <link rel = "stylesheet" href="mediaqueries.css">
 </head>
 <body>
-    <header>
-        <img class = "logo" src="assets/wasdwasdawd_2_64x64.jpg" alt="logo">
-        <nav>
+    <header class = "testbar">
+         <img class = "logo" src="assets/wasdwasdawd_2_64x64.jpg" alt="logo">
+        <nav id = "desktop-nav">
             <ul class = "nav_links">
-                <li><a href="#about">about</a></li>
-                <li><a href="#experience">experience</a></li>
-                <li><a href="#projects">projects</a></li>
+                <li><a href="#home">home</a></li>
+                <li><a href="#github">github</a></li>
+                <li><a href="#linkedin">linkedin</a></li>
             </ul>
         </nav>
+        <nav id = "hamburger-nav">
+            <div class = "hamburger-menu">
+                <div class = "hamburger-icon" onclick = "toggleMenu()">
+                     <span></span>
+                     <span></span>
+                     <span></span>
+                </div>
+                <div class = "menu-links">
+                    <li><a href="#about" onclick = "toggleMenu()" >about</a></li>
+                    <li><a href="#experience"onclick = "toggleMenu()">experience</a></li>
+                    <li><a href="#projects"onclick = "toggleMenu()">projects</a></li>
+                </div>
+            </div>
+        </nav>
     </header>
+
+    <div class = "layout">
+        <aside class = "sidebar">
+            <h1>tyler ligon.</h1>
+            <p>aspiring cs student.</p>
+        </aside>
+
+        <main class = "content">
+           
+                <button class = "buttons">about me</button>
+                <button class = "buttons" >projects</button>
+                <button class = "buttons">experiences</button>
+                <button class = "buttons">contact</button>
+           
+        </main>
+    </div>
+
+    <script src = "script.js"></script>
 </body>
 </html>

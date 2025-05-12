@@ -35,7 +35,7 @@ li, a {
     text-decoration: none;
 }
 
-header {
+.testbar {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -45,6 +45,7 @@ header {
 
 .logo {
     cursor: pointer;
+    display: flex;
     margin-right: auto;
 }
 
@@ -67,4 +68,131 @@ a:hover {
     color: grey;
     text-decoration: underline;
     text-decoration-color: (181, 181, 181);
+}
+
+/* hamburger menu */
+
+#hamburger-nav {
+    display: none;
+
+}
+
+.hamburger-menu {
+    position: relative;
+    display: inline-block;
+
+}
+
+.hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+    cursor: pointer;
+}
+
+.hamburger-icon span {
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    width: fit-content;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-links a {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-links li {
+    list-style: none;
+
+}
+
+.menu-links.open {
+    max-height: 500px;
+}
+
+.hamburger-icon.open span:first-child{
+    transform: rotate(45deg) translate(10px, 5px);
+
+}
+.hamburger-icon.open span:nth-child(2){
+   opacity: 0;
+
+}
+.hamburger-icon.open span:last-child{
+    transform: rotate(-45deg) translate(10px, -5px);
+
+}
+
+.hamburger-icon span:first-child {
+    transform: none;
+}
+.hamburger-icon span:first-child {
+    opacity: 1;
+}
+.hamburger-icon span:first-child {
+    transform: none;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: 35% 55%;
+    height: 100vh;
+}
+
+.sidebar {
+    background-color: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100vh;
+    text-align: right;
+    font-size: 2.5rem;
+}
+
+
+.sidebar h1 {
+    margin: 0 0 0.5rem 0;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+    padding: 7rem;
+
+}
+
+.buttons {
+    padding: 2rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 12px;
+    background-color: #d3d3d3;
+    transition: background-color 0.3s;
+}
+
+.buttons:hover {
+    background-color: white;
 }
